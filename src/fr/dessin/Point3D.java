@@ -24,7 +24,7 @@ public class Point3D extends Point2D {
 		this.z = dZ;
 	}
 	
-	public void translater(int dX, int dY, int dZ) {
+	public void translater(int dX, int dY, int dZ) throws PointException {
 		this.translater(dX, dY); // instead of super. you can use this. because it inherits the method from Point2D
 		this.z += dZ;
 	}

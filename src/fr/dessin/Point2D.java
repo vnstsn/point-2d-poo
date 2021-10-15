@@ -9,7 +9,7 @@ public class Point2D {
 	}
 	
 	public Point2D(int vX, int vY) {
-		this();
+		this(); // to call counter++
 		this.x = vX;
 		this.y = vY;
 		
@@ -35,7 +35,10 @@ public class Point2D {
 		this.y = valY;
 	}
 	
-	public void translater(int dX, int dY) {
+	public void translater(int dX, int dY) throws PointException {
+		if(dX < 0) {
+			throw new PointException("The point dX cant't be define under 0");
+		}
 		this.x += dX;
 		this.y += dY;
 	}
