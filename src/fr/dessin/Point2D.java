@@ -5,13 +5,14 @@ public class Point2D {
 	private int x, y;
 	
 	public Point2D() {
-		System.out.println("Number of point, you've created: " + getCounter() );
+		System.out.println("Number of points, you've created: " + getCounter());
 	}
 	
 	public Point2D(int vX, int vY) {
+		System.out.println("Number of points, you've created: " + getCounter());
 		this.x = vX;
 		this.y = vY;
-		System.out.println("Number of point, you've created: " + getCounter() );
+		
 	}
 	
 	public void display() {
@@ -35,11 +36,19 @@ public class Point2D {
 	}
 	
 	public void translater(int dX, int dY) {
-		System.out.println(this.x += dX);
-		System.out.println(this.y += dY);
+		int translateX = this.x += dX;
+		int translateY = this.y += dY;
+		System.out.println("Points after translater : [ " + translateX + ", " + translateY + " ]");
 	}
 	
 	public static int getCounter() {
 		return (counter++)+1;
 	}
+
+	@Override
+	public String toString() {
+		return "Point2D [x=" + x + ", y=" + y + "]";
+	}
+
+	
 }

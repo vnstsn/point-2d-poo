@@ -13,6 +13,10 @@ public class Run {
 		
 		Point2D pointsTest3 = new Point2D(7, 22);
 		pointsTest3.display();
+		
+		Point3D point3DTest = new Point3D(3, 9, 12);
+		point3DTest.display();
+		point3DTest.translater(1, 42, 79);
 	}
 
 }
