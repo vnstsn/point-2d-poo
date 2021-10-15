@@ -1,15 +1,15 @@
 package fr.dessin;
 
 public class Point2D {
-	static int counter;
 	private int x, y;
+	private static int counter;
 	
 	public Point2D() {
-		System.out.println("Number of points, you've created: " + getCounter());
+		counter++;
 	}
 	
 	public Point2D(int vX, int vY) {
-		System.out.println("Number of points, you've created: " + getCounter());
+		this();
 		this.x = vX;
 		this.y = vY;
 		
@@ -36,13 +36,12 @@ public class Point2D {
 	}
 	
 	public void translater(int dX, int dY) {
-		int translateX = this.x += dX;
-		int translateY = this.y += dY;
-		System.out.println("Points after translater : [ " + translateX + ", " + translateY + " ]");
+		this.x += dX;
+		this.y += dY;
 	}
 	
 	public static int getCounter() {
-		return (counter++)+1;
+		return counter;
 	}
 
 	@Override
